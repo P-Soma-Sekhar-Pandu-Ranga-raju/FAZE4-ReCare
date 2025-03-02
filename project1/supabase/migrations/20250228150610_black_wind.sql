@@ -1,18 +1,3 @@
-/*
-  # Create users and profiles tables
-
-  1. New Tables
-    - `profiles`
-      - `id` (uuid, primary key)
-      - `email` (text, unique)
-      - `full_name` (text)
-      - `created_at` (timestamp)
-      - `updated_at` (timestamp)
-  2. Security
-    - Enable RLS on `profiles` table
-    - Add policies for authenticated users to read/write their own data
-*/
-
 -- Create profiles table
 CREATE TABLE IF NOT EXISTS profiles (
   id uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
