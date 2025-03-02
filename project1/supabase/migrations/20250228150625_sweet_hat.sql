@@ -1,18 +1,3 @@
-/*
-  # Create user activity tracking table
-
-  1. New Tables
-    - `user_activity`
-      - `id` (uuid, primary key)
-      - `user_id` (uuid, foreign key to profiles)
-      - `activity_type` (text)
-      - `details` (jsonb)
-      - `created_at` (timestamp)
-  2. Security
-    - Enable RLS
-    - Add policies for authenticated users to read/write their own data
-*/
-
 -- Create user_activity table
 CREATE TABLE IF NOT EXISTS user_activity (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
